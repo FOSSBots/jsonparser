@@ -13,7 +13,7 @@ setup(
     name='jsonparser',
     version='1.0.0',
     description='jsonparser utility for MirahezeBots',
-    long_description=readme + '\n\n' + history,
+    long_description=readme
     long_description_content_type='text/markdown',  # This is important!
     author='MirahezeBot Contributors',
     author_email='bots@miraheze.org',
