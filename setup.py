@@ -10,7 +10,7 @@ with open('requirements.txt') as requirements_file:
 
 
 setup(
-    name='MirahezeBot_jsonparser',
+    name='jsonparser',
     version='1.0.0',
     description='jsonparser utility for MirahezeBots',
     long_description=readme + '\n\n' + history,
