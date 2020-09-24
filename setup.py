@@ -15,7 +15,7 @@ setup(
     author='MirahezeBot Contributors',
     author_email='bots@miraheze.org',
     url='https://github.com/MirahezeBots/jsonparser',
-    packages=find_packages('.')
+    packages=find_packages('.'),
     include_package_data=True,
     license='Eiffel Forum License, version 2',
 )
