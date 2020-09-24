@@ -12,7 +12,7 @@ install:
     - pip install flake8
 before_script:
     - python --version
-    - pip show jsonparser
+    - pip show MirahezeBots-jsonparser
 
 script:
     - flake8 jsonparser --max-line-length 265 --exclude=__init__.py
