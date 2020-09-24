@@ -15,7 +15,7 @@ before_script:
     - pip show MirahezeBots-jsonparser
 
 script:
-    - flake8 jsonparser --max-line-length 265 --exclude=__init__.py
+    - flake8 MirahezeBots-jsonparser --max-line-length 265 --exclude=__init__.py
 
 after_script:
     - pip freeze
