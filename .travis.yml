@@ -9,6 +9,7 @@ os: linux
 
 install:
     - pip install .
+    - pip install flake8
 before_script:
     - python --version
     - pip show jsonparser
