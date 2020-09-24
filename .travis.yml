@@ -1,40 +1,35 @@
 language: python
 python:
-  - "3.6" # Supported until at least 2021-12-23 upstream, never ran by us.
-  - "3.7" # Our instance, supported until at least 2023-06-27 upstream.
-  - "3.8" # latest python version
-  - "3.8-dev"  # 3.8 development branch
+- '3.6'
+- '3.7'
+- '3.8'
+- 3.8-dev
 dist: xenial
 os: linux
-
 install:
-    - pip install .
-    - pip install flake8
+- pip install .
+- pip install flake8
 before_script:
-    - python --version
-    - pip show MirahezeBots-jsonparser
-
+- python --version
+- pip show MirahezeBots-jsonparser
 script:
-    - flake8 MirahezeBots-jsonparser --max-line-length 265 --exclude=__init__.py
-
+- flake8 MirahezeBots-jsonparser --max-line-length 265 --exclude=__init__.py
 after_script:
-    - pip freeze
-
+- pip freeze
 deploy:
   provider: pypi
   username: __token__
   password:
-    secure: "s7+VjPrBDBICr3yvDEw9lq/iqE22BNYuNH3l6LL/5ebaQ+yqZ9hF0wWnd5JE8tdJnm2wXK5tHbIoIKr6quJLYYdZJ7MnuHdetYQFJjq8EQy3rU7LHcjho7nFU9I1b/RgQrLtFLx6Yq+Ozcceyux0+WWqfhoJ8Tptz1n03dOtdRupn+OMDSoJZLDAJqRrPseeVZpFKHFvitzbnPDYn5yAb2EW96wodYFYtJNZ4VFC5Gvh7qejbt7Cwtsu3KlPWubpYGBWnwMfyyM7yoV+gSQ/NvdFTtdbjH4Ebwy/DDKkwP9i9jNB5H5P0ntEIpDGvUhmbfj2G11rKHpLdAZsZgWqqLL74YsGTCmqoLVxNNDByWP8eN+U+u9uFY9D1fRbIshisl2yzTKkGV+dr9N+ZZNa9O8ii+emT9PpwCdWft9YrdsHuPNah3RkuuNede2jNeXpkBPd1t5sZvNtyto/CPRLNEavG8Z60yp+cXBNpam8FSBOK9ZAhc6DC7jPuX6hwPcNGwoZQra7wZMS457Pbpi7pfhjxApHhGSUikZ60+DvbEgDgi6Nut36M3SfS4FP/vRnJbIIb4k4I8o0X38Re4E4R5W5sD3TS7MACCRvOy/JNNmYnK0paxqgaUDZULDchdu3aU32mitDM8zC6ylDFVwLIpqkIaYmWjoD0CvNkpYh88U="
+    secure: P20/7BLiuCSy31r0EQg72LERq8JQKfwDvluPMqPjIV1FgqSSqRt/K9kmKP0ydUotTWb/a1AOjVqVoLDiiIAgdziu8XxtculYRJIhsl2h6QuSVVOtEGQ6g/r1NboMvTXs12swt8F2ZFTye4SNKBhkHSyqJ488JxnDFRH5eIR5Wb4YoOthbN1xy4dk+ExwmTJrMgaSQ+o3SyzIkEuGS+d/PdjGS+KET/T+bpsaBNVhLItqZF4UHCT/ivy4FRuth9wKZUhl7oqiYRxQxS52wB7nsHG8IPyQMONXhffj3THlUsE8N4U183eqdwg8l6RzGskevjLRJkY63xGQ0zfzWCc1pvQHT9+83cyw6qbKXar/9dHgnuEPAqFi7oFgoVIrfsCegfxJMRme5Nu87GCS+1q+q7h8b5k3ndgtoC4V0ldxsXCKf8Pc3lIUG3qyJSq7qJDAcsBtHL4FI0WvXhETN8ppNokGS69Hmv4iWc1TMZDvPYL0TW/RM3IPtHGawX9KR4q48VZFiKs36mKIMcPfJXSrj5NXfHRgSoRz/aqEULqtDCYyH55nwVSmPO7V6MAKkdU0iJfd05avghRebTVb1165UAp3MF3dqgWV7KDmdVPrFsNRG4GWJWAHlBwFdpyTegXMXHhLkR8yOvlyDisy5vhb8E8qK8YbBFJbl5w8BDLjwk4=
   on:
-    python: "3.7"
+    python: '3.7'
     tags: true
   skip_existing: true
-    
 notifications:
   irc:
     channels:
-      - "chat.freenode.net#miraheze-bots"
+    - chat.freenode.net#miraheze-bots
     on_success: change
     on_failure: always
     template:
-      - "%{repository}/%{branch}/%{commit} - %{author} %{message} %{build_url}"
+    - "%{repository}/%{branch}/%{commit} - %{author} %{message} %{build_url}"
