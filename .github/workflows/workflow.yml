@@ -28,7 +28,7 @@ jobs:
           pip show MirahezeBots_jsonparser
       - name: Run tests
         run: |
-          flake8 MirahezeBots_jsonparser --max-line-length 265
+          flake8 MirahezeBots_jsonparser --max-line-length 265 --exclude=__init__.py
           pytest tests
       - name: Run pip freeze
         run: |
