@@ -25,7 +25,7 @@ jobs:
       - name: Show python version and plugin package
         run: |
           python --version
-          pip show sopel_plugins.MirahezeBots_jsonparser
+          pip show MirahezeBots_jsonparser
       - name: Run tests
         run: |
           flake8 MirahezeBots_jsonparser --max-line-length 265
