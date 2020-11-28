@@ -6,14 +6,14 @@ ALTDICT = {'#miraheze-cvt-fake': {'inherits-from': ['#miraheze-cvt']}, '#mirahez
 
 
 def test_create_dict():
-    assert DICT == jp.createdict('tests/test_json.json')
+    assert DICT == jp.createdict('jsontests/test_json.json')
 
 
 def test_check_dict_true():
-    result = jp.validatecache('tests/test_json.json', DICT)
+    result = jp.validatecache('jsontests/test_json.json', DICT)
     assert result is True
 
 
 def test_check_dict_false():
-    result = jp.validatecache('tests/test_json.json', ALTDICT)
+    result = jp.validatecache('jsontests/test_json.json', ALTDICT)
     assert result is False
