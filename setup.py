@@ -8,7 +8,7 @@ with open('README.md') as readme_file:
 
 setup(
     name='MirahezeBots_jsonparser',
-    version='1.0.1',
+    version='1.0.2',
     description='jsonparser utility for MirahezeBots',
     long_description=readme,
     long_description_content_type='text/markdown',  # This is important!
