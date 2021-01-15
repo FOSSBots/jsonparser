@@ -7,8 +7,6 @@ def createdict(filename):
     return json.loads(data)
 
 
-def validatecache(filename, dict):
+def validatecache(filename, cachedict):
     cached = createdict(filename)
-    if cached == dict:
-        return True
-    return False
+    return bool(cached == cachedict)
