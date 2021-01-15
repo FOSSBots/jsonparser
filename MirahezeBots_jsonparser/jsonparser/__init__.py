@@ -11,5 +11,4 @@ def validatecache(filename, dict):
     cached = createdict(filename)
     if cached == dict:
         return True
-    else:
-        return False
+    return False
