@@ -4,11 +4,13 @@ from setuptools import setup, find_packages
 
 with open('README.md') as readme_file:
     readme = readme_file.read()
+with open('requirements.txt') as requirements_file:
+    requirements = list(requirements_file.readlines())
 
 
 setup(
     name='MirahezeBots_jsonparser',
-    version='1.0.2',
+    version='1.0.3',
     description='jsonparser utility for MirahezeBots',
     long_description=readme,
     long_description_content_type='text/markdown',  # This is important!
