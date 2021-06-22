@@ -10,12 +10,12 @@ with open('requirements.txt') as requirements_file:
 
 setup(
     name='MirahezeBots_jsonparser',
-    version='1.0.3',
+    version='1.0.4',
     description='jsonparser utility for MirahezeBots',
     long_description=readme,
     long_description_content_type='text/markdown',  # This is important!
     author='MirahezeBot Contributors',
-    author_email='bots@miraheze.org',
+    author_email='staff@mirahezebots.org',
     url='https://github.com/MirahezeBots/jsonparser',
     packages=find_packages('.'),
     include_package_data=True,
